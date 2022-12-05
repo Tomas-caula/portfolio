@@ -1,0 +1,27 @@
+body {
+  background-color: #121212;
+
+}
+h1 {
+  font-size: 100px;
+  background-image: url(giphy.gif);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+  
+}
+h2{
+  color: aliceblue;
+  font-size: 50px;
+  margin-top: 10px;
+}
+.introduccion{
+  text-align: center;
+  height: 800px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
