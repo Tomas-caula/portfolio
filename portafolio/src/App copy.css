@@ -30,21 +30,10 @@ h2{
   position: absolute;
 }
 #content {
-  width: 1400px;
-  height: 3072px;
-  background: #F0F0F0;
-  position: absolute;
-  right: 0px;
-}
-#bienvenido {
   position: relative;
-  top: 350px;
-  text-align: center;
-  color: #000000;
-  font-family: 'DM Serif Text';
-  font-style: normal;
-
-
+  width: 938px;
+  height: 3072px;
+  
+  background: #F0F0F0;
 }
-
 
