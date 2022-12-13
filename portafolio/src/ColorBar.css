@@ -1,11 +1,12 @@
 
 
 #colorBarDiv {
-position: absolute;
+position: relative;
 height: 152px;
 left: 0px;
 right: 0px;
-top: 1024px;
+top: 0px;
+
 
 background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
 }
@@ -17,6 +18,11 @@ font-weight: 400;
 font-size: 64px;
 line-height: 74%;
 color: #F0F0F0;
+margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #img {

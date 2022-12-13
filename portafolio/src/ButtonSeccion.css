@@ -13,3 +13,9 @@ text-align: center;
 
 }
 
+#buttonSeccion:hover {
+    background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+    color: white;
+    border-radius: 20px;
+}
+

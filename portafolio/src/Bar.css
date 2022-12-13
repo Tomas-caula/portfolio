@@ -61,9 +61,27 @@ top: 810px;
 background: url(react.png);
 }
 
+#reactImg:hover {
+    animation: rotate 2s infinite linear;
+}
+
 #ubiBtnOne {
     position: relative;
     left: 131px;
     top: 502px;
     margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+
 }
