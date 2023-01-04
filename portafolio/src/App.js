@@ -1,16 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
-import Bar from './Bar';
-import Content from './Content';
+import ColorBar from "./components/ColorBar/ColorBar"
+import photoofme from "./photoofme.png"
+import ecoeye from "./ecoeye.png"
+import Card from './components/Cards/Card';
+import Bar from "./components/bar/Bar"
 
 
 
 function App() {
   return (
-<body> 
-    <Bar></Bar>
-    <div id='divContent'>
-     <Content></Content>
+<body>
+    <div id='conteiner'>
+      <div id='all'> 
+     
+      <div id = "bienvenido">
+          <div id = "contenido"> 
+            <h1>Bienvenido</h1>
+            <h2>A mi portafolio</h2>
+          </div>
+      </div>
+      <ColorBar title ="Sobre Mi"> </ColorBar>
+
+      <div id='sobreMi'>
+          <div id='contenido'>
+          <img src={photoofme}/>
+          <h6>
+          Hola, soy Tomas un Full stack developer. Recientemente terminé la escuela secundaria en la que hice varios proyectos que veran a continuacione
+          </h6>
+          </div>
+      </div>
+
+      <ColorBar title ="Mis proyectos"> </ColorBar>
+
+      <div id='proyectos'>
+          <div id='contenido'>
+            <div id = "cartaUno"> 
+              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+            </div>
+              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+          </div>
+      </div>
+    
+      </div>
+      <Bar/>
     </div>
 </body>
     

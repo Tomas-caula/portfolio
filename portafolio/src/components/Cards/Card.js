@@ -1,7 +1,7 @@
-import '../App.css';
-import github from "../github.png"
-import instagram from "../instagram.png"
-import zone from "../zone.png"
+import './card.css';
+import github from "../../github.png"
+import instagram from "../../instagram.png"
+
 
 
 function Card(props) {

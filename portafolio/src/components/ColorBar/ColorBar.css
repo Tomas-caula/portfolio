@@ -1,0 +1,271 @@
+
+@media (min-width: 320px){
+  #colorBarDiv {
+    position: relative;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    
+    
+    background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+    }
+    #titleColorBar{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 74%;
+    color: #F0F0F0;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #img {
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 75px;
+        top: 1448px;
+    }
+    p{
+        position: absolute;
+    width: 505px;
+    height: 436px;
+    top: 1371px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 84%;
+    /* or 34px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 500px;
+    color: #000000;
+    }
+    
+ 
+}
+@media (min-width: 576px){
+  #colorBarDiv {
+    position: relative;
+    height: 152px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    
+    
+    background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+    }
+    #titleColorBar{
+    text-align: center;
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 74%;
+    color: #F0F0F0;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #img {
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 75px;
+        top: 1448px;
+    }
+    p{
+        position: absolute;
+    width: 505px;
+    height: 436px;
+    top: 1371px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 84%;
+    /* or 34px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 500px;
+    color: #000000;
+    }
+}
+@media (min-width: 768px){
+  #colorBarDiv {
+    position: relative;
+    height: 152px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    
+    
+    background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+    }
+    #titleColorBar{
+    text-align: center;
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 74%;
+    color: #F0F0F0;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #img {
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 75px;
+        top: 1448px;
+    }
+    p{
+        position: absolute;
+    width: 505px;
+    height: 436px;
+    top: 1371px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 84%;
+    /* or 34px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 500px;
+    color: #000000;
+    }
+}
+@media (min-width: 992px){
+  #colorBarDiv {
+    position: relative;
+    height: 152px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    
+    
+    background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+    }
+    #titleColorBar{
+    text-align: center;
+    font-family: 'DM Serif Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 74%;
+    color: #F0F0F0;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    #img {
+        position: absolute;
+        width: 283px;
+        height: 283px;
+        left: 75px;
+        top: 1448px;
+    }
+    p{
+        position: absolute;
+    width: 505px;
+    height: 436px;
+    top: 1371px;
+    
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 84%;
+    /* or 34px */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 500px;
+    color: #000000;
+    }
+}
+@media (min-width: 1200px){
+  
+
+#colorBarDiv {
+  position: relative;
+  height: 152px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  
+  
+  background: linear-gradient(180deg, #BD1BE3 0%, #981DE2 100%);
+  }
+  #titleColorBar{
+  text-align: center;
+  font-family: 'DM Serif Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74%;
+  color: #F0F0F0;
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #img {
+      position: absolute;
+      width: 283px;
+      height: 283px;
+      left: 75px;
+      top: 1448px;
+  }
+  p{
+      position: absolute;
+  width: 505px;
+  height: 436px;
+  top: 1371px;
+  
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 84%;
+  /* or 34px */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 500px;
+  color: #000000;
+  }
+  
+}
