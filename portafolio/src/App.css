@@ -102,12 +102,19 @@
     }
 }
 @media (min-width: 1200px) {
+
   #all {
-    width: 140%;
+    position: absolute;    
+    right: 0px;
+    width: 70%;
+
   }
 
   #proyectos #contenido {
     flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   } 
   #proyectos {
     position: relative;
@@ -115,7 +122,7 @@
   }
 
   #cartaUno{
-    margin-left: 700px;
+    margin-left: 7;
   }
 
 

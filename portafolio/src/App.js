@@ -34,16 +34,16 @@ function App() {
 
       <div id='proyectos'>
           <div id='contenido'>
-            <div id = "cartaUno"> 
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-            </div>
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
           </div>
       </div>
     
       </div>
-      <Bar/>
+      <div id = "onlyBar"> 
+        <Bar/>
+      </div>
     </div>
 </body>
     
