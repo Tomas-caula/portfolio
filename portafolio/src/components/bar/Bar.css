@@ -10,7 +10,16 @@
 
 }
 
+@media (min-width: 2px) {
+    #bar{
+        visibility: hidden;
+    }
+}
+
 @media (min-width: 1200px){
+    #bar {
+        visibility: visible;
+    }
     #bar {
         position: fixed;
         width: 30%;

@@ -1,8 +1,8 @@
    #colorBarDiv {
     position: relative;
     height: 152px;
-    left: 0px;
     right: 0px;
+    width: 100%;
     top: 0px;
     display: flex;
     justify-content: center;
