@@ -37,6 +37,9 @@ function App() {
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
               <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+              <Card title = "aa" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {ecoeye} />
+              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+              <Card title = "aa" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {ecoeye} />
           </div>
       </div>
     

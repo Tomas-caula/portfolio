@@ -63,11 +63,8 @@
       width: 100%;
     } 
     #proyectos #contenido {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      height: 100%;
-      width: 100%;
+      display: grid;
+      justify-content: center;
       }
     
 
@@ -111,10 +108,10 @@
   }
 
   #proyectos #contenido {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 33% auto;
     justify-content: center;
+    gap: 20px;
   } 
   #proyectos {
     position: relative;
