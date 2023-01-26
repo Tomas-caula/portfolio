@@ -2,8 +2,11 @@ import './App.css';
 import ColorBar from "./components/ColorBar/ColorBar"
 import photoofme from "./photoofme.png"
 import ecoeye from "./ecoeye.png"
+import zone from "./zone.png"
 import Card from './components/Cards/Card';
 import Bar from "./components/bar/Bar"
+import picto from "./picto.png"
+import cauladodero from "./cauladodero.png"
 
 
 
@@ -34,12 +37,10 @@ function App() {
 
       <div id='proyectos'>
           <div id='contenido'>
-              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-              <Card title = "aa" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {ecoeye} />
-              <Card title = "Hola" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-              <Card title = "aa" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {ecoeye} />
+              <Card title = "EcoEye" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
+              <Card title = "Picto" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {picto}/>
+              <Card title = "Zone" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {zone}/>
+              <Card title = "Caula&Dodero" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {cauladodero} />
           </div>
       </div>
     
