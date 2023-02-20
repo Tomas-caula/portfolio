@@ -19,28 +19,36 @@ function App() {
       <div id = "bienvenido">
           <div id = "contenido"> 
             <h1>Bienvenido</h1>
-            <h2>A mi portafolio</h2>
+            <h2>A mi portfolio</h2>
           </div>
       </div>
-      <ColorBar title ="Sobre Mi"> </ColorBar>
+
 
       <div id='sobreMi'>
           <div id='contenido'>
           <img src={photoofme}/>
-          <h6>
-          Hola, soy Tomas un Full stack developer. Recientemente terminé la escuela secundaria en la que hice varios proyectos que veran a continuacione
-          </h6>
+          <div style={{textAlign: 'left', margin: 20}}> 
+            <h1 className='aa'>
+              Sobre Mi
+            </h1>
+            <h6>
+             Hola, soy Tomas un Full stack developer. Recientemente terminé la escuela secundaria en la que hice varios proyectos que veran a continuacione
+            </h6>
+          </div>
+
+        
           </div>
       </div>
 
-      <ColorBar title ="Mis proyectos"> </ColorBar>
 
       <div id='proyectos'>
+        
+      <ColorBar title ="Mis proyectos"> </ColorBar>
           <div id='contenido'>
-              <Card title = "EcoEye" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {ecoeye}/>
-              <Card title = "Picto" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {picto}/>
-              <Card title = "Zone" parrafo ="asas" instagram ="wwww.com,com" github = "wwww.sikdja.com" img  = {zone}/>
-              <Card title = "Caula&Dodero" parrafo = "aass" instagram = "www.com.com " github ="www.sdasd.com" img = {cauladodero} />
+              <Card title = "EcoEye" parrafo ="EcoEye es un proyecto de reconocimiento de aves argentinas, ya sea por imagenes, o por su canto mediante Machine Learning. Buscamos informar sobre la fauna que nos rodea." instagram ="https://www.instagram.com/ecoeye_/"  img  = {ecoeye}/>
+              <Card title = "Picto" parrafo ="Picto es una aplicacion que ayuda a la comunicacion con personas con sindrome de aspecto autista mediante pictogramas" instagram ="https://www.instagram.com/picto_aplicacion/" github = "https://github.com/Chacortaok/Pict0" img  = {picto}/>
+              <Card title = "Zone" parrafo ="Zone es una aplicacion que permite compra y venta de tickets, esta fue realizado con React Native" instagram ="wwww.com,com" img  = {zone}/>
+              <Card title = "Caula&Dodero" parrafo = "Caula dodero es una static web page realizada con React" github ="www.sdasd.com" img = {cauladodero} />
           </div>
       </div>
     

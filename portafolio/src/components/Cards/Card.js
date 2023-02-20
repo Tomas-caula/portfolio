@@ -5,6 +5,9 @@ import instagram from "../../instagram.png"
 
 
 function Card(props) {
+  const ig = props.instagram
+  const git = props.github
+
   return (
         <div className='card'>
           <div className='front face'>
@@ -15,12 +18,21 @@ function Card(props) {
               <h3>{props.title}</h3>
               <h3>{props.parrafo}</h3>
               <div className='link'> 
-                <a href= {props.instagram}>
-                  <img src={instagram}/>
+              {ig ? 
+                (
+                <a href= {ig}>
+                <img src={instagram}/>
                 </a>
-                <a href= {props.github}>
-                  <img src={github}/>
-                </a>
+                ):null
+              }
+              {git ?(
+                 <a href= {props.github}>
+                 <img src={github}/>
+               </a>
+              ):null
+
+              }             
+               
               </div>
           </div>
         </div>
