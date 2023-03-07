@@ -15,13 +15,13 @@ function Bar() {
           </div>
         <div className='buttons'>
           <div id ="ubiBtnOne">
-          <Buttonseccion title = "Mis proyectos"> </Buttonseccion>
+          <Buttonseccion site = "#proyectos" title = "Mis proyectos"> </Buttonseccion>
           </div>
           <div id ="ubiBtnOne">
-            <Buttonseccion title = "Sobre Mi"> </Buttonseccion>
+            <Buttonseccion site = "#sobreMi" title = "Sobre Mi"> </Buttonseccion>
           </div>
           <div id ="ubiBtnOne">
-            <Buttonseccion title = "Mis tecnologias"> </Buttonseccion>
+            <Buttonseccion site = "" title = "Mis tecnologias"> </Buttonseccion>
           </div>
         </div>
         <div className='made-with'>

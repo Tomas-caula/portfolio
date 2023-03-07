@@ -3,7 +3,7 @@ import './ButtonSeccion.css';
 function Buttonseccion(props) {
   return (
     <button  id = "buttonSeccion" onClick={() => {console.log("ajskajsk")}}> 
-       <a href='#img'>{props.title}</a> 
+       <a href={props.site}>{props.title}</a> 
     </button>
     
   );
