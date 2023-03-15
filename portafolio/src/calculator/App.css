@@ -1,0 +1,41 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100vh;
+}
+
+.keyboard{
+  border: 2px solid black;
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.numbers { 
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%; 
+}
+
+.simbols { 
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%; 
+}
+.conteiner-button button {
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+}
+
+.calculator.display {
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+  width: 50%;
+  height: 15%;
+}
