@@ -8,7 +8,7 @@ function Calculator() {
   const simbols = ["+", "-", "*", "/"]
 
   function concat (e) {
-      if (data === 0) {
+      if (data == 0) {
         if(simbols.includes(e) ){
           return
         }
@@ -19,6 +19,7 @@ function Calculator() {
       }
 
       else if (numbers.includes(e)) {
+
         const a = data
         const res = `${a}${e}`
         setData(res)
@@ -27,20 +28,29 @@ function Calculator() {
       else if (simbols.includes(e)) {
         
            
-          
-              const stringLength = data.length; // this will be 16
-              const ult = data.charAt(stringLength - 1)
-
-              if (ult == " ") {
-                return 
-              }
+              const leng = data.length
+              console.log(leng)
+              let ult; 
+              if (leng == undefined) ( 
+                ult = data
+              )
               else {
+              ult = data.charAt(leng - 1 )
+              console.log(ult)
+              }
+              
+
+              if (ult !== " ") {
                 const a = data 
                 const res = a + " " + e + " "
                 setData (res)
               }
+          
 
       
+      }
+      else {
+        return
       }
   }
 
@@ -122,7 +132,7 @@ function Calculator() {
                   )
                 })}
             </div>
-        </div>
+          </div>
     </div>
   );
 }
