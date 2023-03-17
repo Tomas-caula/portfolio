@@ -7,10 +7,12 @@ import Card from './components/Cards/Card';
 import Bar from "./components/bar/Bar"
 import picto from "./picto.png"
 import cauladodero from "./cauladodero.png"
+import { useRef } from 'react';
 
 
 
 function App() {
+
   return (
 <body>
     <div id='conteiner'>
