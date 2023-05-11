@@ -7,58 +7,57 @@ import Card from './components/Cards/Card';
 import Bar from "./components/bar/Bar"
 import picto from "./picto.png"
 import cauladodero from "./cauladodero.png"
+import { motion } from "framer-motion";
 import { useRef } from 'react';
+import zoneImage from "./img/ZoneImage.png";
+import Cmd from "../src/cmd/cmd"
+import { useState } from 'react';
+
 
 
 
 function App() {
-
+  const constraintsRef = useRef(null);
+  const [shouldShowZone, setShouldShowZone] = useState(false)
+  const ecoeyeRef = useRef(null)
   return (
-<body>
-    <div id='conteiner'>
-      <div id='all'> 
-     
-      <div id = "bienvenido">
-          <div id = "contenido"> 
-            <h1>Bienvenido</h1>
-            <h2>A mi portfolio</h2>
-          </div>
-      </div>
+<body ref={constraintsRef}>
+
+    <div   className='a'> 
+      <Cmd body = {constraintsRef} > </Cmd>
+        <div className='firstBar'>
+            <div className='NameAndWork'> 
+                <h1>Tomás Caula</h1>
+                <h1>*</h1>
+                <h1>Full-Stack Develope</h1>
+            </div>
+
+        </div>
+
+        <div className='ContactBar'> 
+          <h1>Contact</h1>
+        </div>
 
 
-      <div id='sobreMi'>
-          <div id='contenido'>
-          <img src={photoofme}/>
-          <div style={{textAlign: 'left', margin: 20}}> 
-            <h1 className='aa'>
-              Sobre Mi
-            </h1>
-            <h6>
-             Hola, soy Tomas un Full stack developer. Recientemente terminé la escuela secundaria en la que hice varios proyectos que veran a continuacione
-            </h6>
-          </div>
+        <div className='AboutMebar'> 
+            <h2>2023</h2>
+            <div>
+              <h1>
+                  Hola soy Tomas Caula un Full-Stack Developer de 17 años que hace ya mas de 3 años me sumerjo dentro de las tecnologias como React Node.Js, etc.
+              </h1>
+              <h1>Te invito a ver mis proyectos</h1>
+            </div>
+        </div>
 
-        
-          </div>
-      </div>
+        <div className='ProyectsBar'> 
+            <h1 onClick={() => setShouldShowZone(true)} >//*Zone</h1>
+            <h1 ref={ecoeyeRef}>//*EcoEye</h1>
+            <h1>//*Picto</h1>
+            <div className='line'></div>
 
-
-      <div id='proyectos'>
-        
-      <ColorBar title ="Mis proyectos"> </ColorBar>
-          <div id='contenido'>
-              <Card title = "EcoEye" parrafo ="EcoEye es un proyecto de reconocimiento de aves argentinas, ya sea por imagenes, o por su canto mediante Machine Learning. Buscamos informar sobre la fauna que nos rodea." instagram ="https://www.instagram.com/ecoeye_/"  img  = {ecoeye}/>
-              <Card title = "Picto" parrafo ="Picto es una aplicacion que ayuda a la comunicacion con personas con sindrome de aspecto autista mediante pictogramas" instagram ="https://www.instagram.com/picto_aplicacion/" github = "https://github.com/Chacortaok/Pict0" img  = {picto}/>
-              <Card title = "Zone" parrafo ="Zone es una aplicacion que permite compra y venta de tickets, esta fue realizado con React Native" instagram ="wwww.com,com" img  = {zone}/>
-              <Card title = "Caula&Dodero" parrafo = "Caula dodero es una static web page realizada con React" github ="www.sdasd.com" img = {cauladodero} />
-          </div>
-      </div>
-    
-      </div>
-      <div id = "onlyBar"> 
-        <Bar/>
-      </div>
+        </div>
     </div>
+  
 </body>
     
   );
