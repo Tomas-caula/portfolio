@@ -75,6 +75,10 @@ color: #FFFFFF
 }
 
 
+.right {
+  height: 100%;
+}
+
 @font-face {
   font-family: "consolas";
   src: url(../../public/CONSOLA.TTF);
@@ -144,4 +148,27 @@ img {
   padding-left: 10px;
   width: 440.14px;
   height: 182.56px;
+}
+
+.closeHandle {
+  border: none;
+  width: 62.5px;
+  height: 100%;
+  color: #FFFFFF;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.closeHandle img {
+  height: 100%;
+  width: 12px;
+}
+
+.closeHandle:hover {
+  background-color: #cc0000;
 }

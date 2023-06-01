@@ -79,6 +79,8 @@ const [modals, setModals] = useState([])
     <div className='a'> 
     {modals.map((modal) => (
         <Draggable key={modal.id}
+        handle='.NavBar'
+        defaultPosition={{ x: window.innerWidth / 2, y: window.innerHeight / 2 }}
         >
           <div> 
            <Cmd name = {modal.name} close={handleCloseModal} id = {modal.id} image = {modal.imgTilte} texto = {modal.texto} ico = {modal.ico}/>
@@ -100,19 +102,24 @@ const [modals, setModals] = useState([])
 
 
         <div className='AboutMebar'> 
+          <div className="content">
             <h2>2023</h2>
-            <div>
+            <div className='text'>
               <h1>
-                  Hola soy Tomas Caula un Full-Stack Developer de 17 años que hace ya mas de 3 años me sumerjo dentro de las tecnologias como React Node.Js, etc.
+              Soy un entusiasta desarrollador Full Stack de 17 años con una gran pasión por la tecnología. 
+              <br/> Aquí encontrarás un vistazo a mi trabajo y mi dedicación en el campo de la programación.
+              </h1>    
+              <h1>
+              Mi objetivo es crear soluciones innovadoras y funcionales que impulsen el potencial de la tecnología. Con una sólida formación en desarrollo de software, puedo trabajar tanto en el front-end como en el back-end de los proyectos, brindando una experiencia completa y de calidad.
               </h1>
-              <h1>Te invito a ver mis proyectos</h1>
+            </div> 
             </div>
         </div>
 
         <div className='ProyectsBar'> 
-            <h1 onClick={() => {renderNewCmd(zonetext, "zoneTitle.png",  "Zone","zone.png")}}>//*Zone</h1>
-            <h1 onClick={() => {renderNewCmd(ecoeyetext, "ecoeye.png", "EcoEye", "ecoeye.png" )}}>//*EcoEye</h1>
-            <h1 onClick = {()=> {renderNewCmd(pictoText, "picto.png", "Picto", "picto.png")}}>//*Picto</h1>
+            <h1 className='proyectsName' onClick={() => {renderNewCmd(zonetext, "zoneTitle.png",  "Zone","zone.png")}}>//*Zone</h1>
+            <h1 className='proyectsName' onClick={() => {renderNewCmd(ecoeyetext, "ecoeye.png", "EcoEye", "ecoeye.png" )}}>//*EcoEye</h1>
+            <h1 className='proyectsName' onClick = {()=> {renderNewCmd(pictoText, "picto.png", "Picto", "picto.png")}}>//*Picto</h1>
             <div className='line'></div>
 
         </div>

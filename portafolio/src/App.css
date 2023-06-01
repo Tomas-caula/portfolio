@@ -107,9 +107,48 @@ line-height: 38px;
     line-height: 21px;
     margin-top: 79px;
 }
+
+.proyectsName:hover {
+    animation: text 0.2s linear;
+    animation-fill-mode: forwards;
+    cursor:pointer ;
+
+}
+
+
+
+.proyectsName:not(:hover) {
+    animation: text-out 0.2s linear reverse;
+  }
+
 .line {
     margin-top: 81px;
     width: 80px;
     height: 1px; /* set height of line here */
     background-color: black; /* set color of line here */
+  }
+  @keyframes text {
+    0% {
+
+    }
+    100% {
+        box-shadow: black 2px 30px 90px;
+        color: white;    
+        background-color: black;
+        padding: 10px;
+        
+    }
+  }
+
+  @keyframes text-out {
+    0% {
+
+    }
+    100% {
+        box-shadow: black 2px 30px 90px;
+        color: white;    
+        background-color: black;
+        padding: 10px;
+        
+    }
   }

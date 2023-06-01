@@ -15,10 +15,11 @@ export default function Cmd(props) {
       </div>
 
       <div className='right'> 
-        <button onClick={() =>  { 
+        <button className='closeHandle' onClick={() =>  { 
           props.close(props.id)
         }}> 
-          X
+          
+            <img  src='/images/svg.svg'/>
         </button>
        </div>
     </div>
