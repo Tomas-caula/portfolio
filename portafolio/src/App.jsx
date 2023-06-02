@@ -76,6 +76,7 @@ const [modals, setModals] = useState([])
   return (
 <body ref={constraintsRef}>
 
+  <div className="container">
     <div className='a'> 
     {modals.map((modal) => (
         <Draggable key={modal.id}
@@ -124,8 +125,9 @@ const [modals, setModals] = useState([])
 
         </div>
     </div>
-  
-    
+
+  </div>
+
 </body>
     
   );

@@ -1,3 +1,21 @@
+
+body{ 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.prueba { 
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+}
+
+.segunda {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
 .a { 
 width: 100vw;
 height: 100vh;
@@ -5,12 +23,6 @@ display: grid;
 grid-template-columns: 10% 80% 10%; 
 grid-template-rows:  10% 80% 10%;
 
-}
-
-.container div {
-    border: 2px solid red;
-    width: 100%;
-    height: 100%;
 }
 
 .firstBar {
@@ -36,6 +48,15 @@ line-height: 21px;
 /* identical to box height */
 
 text-align: center;
+}
+
+.AboutMebar {
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
 }
 
 .ContactBar {
@@ -65,10 +86,20 @@ text-decoration-line: underline;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    width: 776px;
-    height: 446px;
+    width: 100%;
     align-items: first baseline;
+
 }
+
+.AboutMebar .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+
 
 .AboutMebar div h1 {
     font-family: 'Roboto';
