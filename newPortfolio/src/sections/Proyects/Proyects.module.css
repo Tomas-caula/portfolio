@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.myproyects {
+  color: #000;
+  font-family: Roboto;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cmdcontainer {
+  border-radius: 10px;
+  border: 3px solid #e9e9e9;
+  background: #fff;
+  display: flex;
+  width: 1006px;
+  height: 484px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #e9e9e9;
+
+}
+.managetabs{
+    height: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.proyects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 1rem;
+    margin: 40px;
+    gap: 10px;
+}
+
+.proyects h1 {
+    font-size: 1rem;
+}
+
+
+.proyects img {
+    height: 100%;
+}

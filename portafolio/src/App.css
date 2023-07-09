@@ -183,3 +183,77 @@ line-height: 38px;
         
     }
   }
+
+
+  .techStackDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F2F2;
+        width: 100vw;
+        height: 100vh;
+  }
+
+  .techStackDiv .ContainTech { 
+     background-color: red;
+     width: 80%;
+     height: 50%;
+  }
+
+  .ContainTech {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+  .into {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .into h1 {
+
+    border-right: 1px solid black;
+
+  }
+
+  .azul {
+    opacity: 0;
+    animation: apearTeach 1s linear forwards;
+    margin: 10px 
+
+  }
+
+  .azul:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+
+
+
+
+.techStackDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    animation: forwards linear 1s techStackAnimation;
+}
+
+
+.techStackDiv .image-container img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+@keyframes techStackAnimation {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        
+    }
+}
+
+

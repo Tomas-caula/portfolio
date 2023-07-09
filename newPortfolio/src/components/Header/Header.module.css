@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  padding: 100px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left .top {
+  width: 100%;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  color: #0a0a0a;
+  font-size: 1rem;
+}
+.left .top h2 {
+  font-weight: 400;
+}
+
+h3 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 22.979px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
