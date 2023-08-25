@@ -3,10 +3,6 @@
 import SkillComponent from "../../components/SkillComponent/SkillComponent";
 import styles from "./Skills.module.css";
 
-type Props = {
-  height?: number;
-};
-
 const FrontEnd = [
   {
     color: "#5AC8FA80",
