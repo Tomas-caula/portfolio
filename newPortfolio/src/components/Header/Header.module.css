@@ -1,8 +1,10 @@
+/** @format */
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   padding: 100px;
 }
@@ -17,23 +19,34 @@
 
 .left .top {
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--font-color);
   padding-bottom: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  color: #0a0a0a;
-  font-size: 1rem;
+  color: var(--font-color);
+  font-size: clamp(0.5rem, 1vw, 5rem);
 }
 .left .top h2 {
   font-weight: 400;
 }
 
 h3 {
-  color: #000;
+  color: var(--font-color);
   font-family: Roboto;
-  font-size: 22.979px;
+  font-size: clamp(1rem, 1vw, 5rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media (max-width: 1000px) {
+  .left {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
 }

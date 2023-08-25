@@ -1,3 +1,5 @@
+/** @format */
+
 import styles from "./Header.module.css";
 
 type Props = {
@@ -7,6 +9,14 @@ type Props = {
 };
 
 export default function Header({ name, title, date }: Props) {
+  function cambiartheme() {
+    if (document.documentElement.getAttribute("theme") == "light") {
+      document.documentElement.setAttribute("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("theme", "light");
+    }
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -21,6 +31,7 @@ export default function Header({ name, title, date }: Props) {
       </div>
 
       <svg
+        onClick={() => cambiartheme()}
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"

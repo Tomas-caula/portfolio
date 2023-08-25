@@ -1,3 +1,5 @@
+/** @format */
+
 .container {
   margin: 30px 0px;
 }
@@ -16,16 +18,24 @@
 }
 
 .tooltxt {
-  color: #000;
+  color: var(--font-color);
+
   font-family: Roboto;
-  font-size: 26px;
+  font-size: clamp(1rem, 1vw, 5rem);
   font-weight: 400;
 }
 .sectiontext {
-  color: #000;
+  color: var(--font-color);
+
   font-family: Roboto;
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media (max-width: 500px) {
+  .content {
+    width: 100%;
+  }
 }

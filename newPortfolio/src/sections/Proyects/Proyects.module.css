@@ -1,13 +1,18 @@
+/** @format */
+
 .container {
   width: 100%;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  padding: 20px;
 }
 
 .myproyects {
-  color: #000;
+  color: var(--font-color);
+
   font-family: Roboto;
   font-size: 2.5rem;
   font-style: normal;
@@ -17,42 +22,87 @@
 
 .cmdcontainer {
   border-radius: 10px;
-  border: 3px solid #e9e9e9;
-  background: #fff;
+  border: 3px solid var(--cmd-navbar);
+  background: var(--background-color);
   display: flex;
-  width: 1006px;
-  height: 484px;
+  flex-direction: column;
+  max-width: 1006px;
+  min-height: 484px;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    background-color: #e9e9e9;
-
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: var(--cmd-navbar);
 }
-.managetabs{
-    height: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
+.managetabs {
+  height: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .proyects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 1rem;
-    margin: 40px;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 1rem;
+  margin: 40px;
+  gap: 10px;
 }
 
 .proyects h1 {
-    font-size: 1rem;
+  color: var(--font-color);
+
+  font-size: 1rem;
 }
 
-
 .proyects img {
-    height: 100%;
+  height: 100%;
+}
+
+.zone {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: clamp(1rem, 1.2vw, 5rem);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  color: var(--font-color);
+}
+
+.description .pregunta {
+  font-weight: 400;
+  font-size: clamp(1rem, 1.2vw, 5rem);
+}
+
+.title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: clamp(1rem, 1vw, 5rem);
+  color: var(--font-color);
+}
+
+.title .image {
+  width: 3em;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
 }

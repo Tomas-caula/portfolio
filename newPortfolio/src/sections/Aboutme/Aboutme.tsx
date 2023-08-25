@@ -1,12 +1,10 @@
+/** @format */
+
 import styles from "./Aboutme.module.css";
 
-type Props = {
-  height: number;
-};
-
-export default function Aboutme({ height }: Props) {
+export default function Aboutme() {
   return (
-    <div className={styles.container} style={{ height: height }}>
+    <div className={styles.container}>
       <p className={styles.text}>
         Soy un entusiasta desarrollador Full Stack de 17 años con una gran
         pasión por la tecnología.Aquí encontrarás un vistazo a mi trabajo y mi
