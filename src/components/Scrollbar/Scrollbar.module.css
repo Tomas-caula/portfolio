@@ -10,7 +10,7 @@
   }
 
   .conteinercontent::-webkit-scrollbar-track-piece {
-    background: #c5c5c5;
+    background: var(--scroll-background);
   }
 
   .conteinercontent::-webkit-scrollbar-track-piece:start {
@@ -22,7 +22,7 @@
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #0a0a0a;
+    background: var(--font-color);
     border-radius: 10px;
   }
 
