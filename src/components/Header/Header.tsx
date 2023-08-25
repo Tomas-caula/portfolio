@@ -18,7 +18,6 @@ export default function Header({ name, title, date }: Props) {
       document.documentElement.setAttribute("theme", "light");
       setCount("light");
     }
-    console.log(count);
   }
 
   const [count, setCount] = useState("light");
@@ -38,6 +37,7 @@ export default function Header({ name, title, date }: Props) {
 
       {count == "light" ? (
         <svg
+          className={styles.svg}
           onClick={() => cambiartheme()}
           xmlns="http://www.w3.org/2000/svg"
           width="50"
@@ -55,6 +55,7 @@ export default function Header({ name, title, date }: Props) {
         </svg>
       ) : (
         <svg
+          className={styles.svg}
           onClick={() => cambiartheme()}
           xmlns="http://www.w3.org/2000/svg"
           width="50"
