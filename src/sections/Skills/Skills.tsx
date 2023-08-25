@@ -9,19 +9,19 @@ const FrontEnd = [
     text: "React.js",
   },
   {
-    color: "#5AC8FA80",
+    color: "rgba(237, 214, 46, 0.5)",
     text: "Javascript",
   },
   {
-    color: "#5AC8FA80",
+    color: "rgba(0, 122, 255, 0.50)",
     text: "Typescript",
   },
   {
-    color: "#5AC8FA80",
+    color: "rgba(255, 59, 48, 0.50)",
     text: "HTML",
   },
   {
-    color: "#5AC8FA80",
+    color: "rgba(0, 122, 255, 0.50)",
     text: "CSS",
   },
   {
