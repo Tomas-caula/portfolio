@@ -11,7 +11,7 @@ export default function Aboutme() {
         dedicación en el campo de la programación. Mi objetivo es crear
         soluciones innovadoras y funcionales que impulsen el potencial de la
         tecnología. Con una sólida formación en desarrollo de software, puedo
-        trabajar tanto en el Front-end como en el back-end de los proyectos,
+        trabajar tanto en el Front-end como en el Back-end de los proyectos,
         brindando una experiencia completa y de calidad.
       </p>
     </div>
