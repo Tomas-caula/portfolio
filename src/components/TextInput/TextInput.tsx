@@ -1,7 +1,6 @@
 /** @format */
 
 import styles from "./TextInput.module.css";
-import React from "react";
 
 type Props = {
   label: string;

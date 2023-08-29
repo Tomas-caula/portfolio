@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import styles from "./Experiencia.module.css";
 import ort from "../../assets/images/Ort.png";
 import uba from "../../assets/images/Uba.png";
