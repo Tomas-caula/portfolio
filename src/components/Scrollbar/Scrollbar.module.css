@@ -45,7 +45,8 @@
   }
 
   .sections {
-    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
   }
@@ -65,5 +66,8 @@
     width: 100%;
     overflow-x: hidden;
     background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
   }
 }

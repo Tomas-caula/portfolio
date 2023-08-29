@@ -9,24 +9,52 @@
   font-family: "Roboto", sans-serif;
 }
 
-.main-container {
-  background-color: var(--background-color);
-}
-
 html {
   background-color: var(--background-color);
+  transition: background-color 0.3s ease;
 }
 
 html[theme="light"] {
   --background-color: #fff;
   --font-color: #000;
   --cmd-navbar: #e9e9e9;
-  --scroll-background: #c5c5c5;
+  --scroll-background: #e7e7e7;
+  --scroll-content: #f5f5f5;
+  --font-timeLine: black;
+  --input-background: #fafafa;
+  --color-button: #222222;
+  --hover-send-msg: rgb(61, 60, 60);
 }
 
 html[theme="dark"] {
   --background-color: #1e1e1e;
-  --font-color: #fff;
+  --font-color: #e7e7e7;
   --cmd-navbar: #282828;
   --scroll-background: #5f5f5f;
+  --scroll-content: #2c2c2c;
+  --font-timeLine: #dfdede;
+  --input-background: #272727;
+  --color-button: #ffff;
+  --hover-send-msg: #cecece;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px var(--scroll-content),
+    inset 0 2px 0 var(--scroll-content), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+}
+
+/** @format */
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle,
+.vertical-timeline-element-date {
+  color: var(--font-timeLine);
+}
+.vertical-timeline-element-content p {
+  color: var(--font-timeLine);
+}
+
+.vertical-timeline-element-content {
+  background-color: var(--scroll-content);
 }
