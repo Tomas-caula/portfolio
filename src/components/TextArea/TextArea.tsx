@@ -6,9 +6,17 @@ import styles from "./TextArea.module.css";
 type Props = {
   label: string;
   className: React.InputHTMLAttributes<HTMLTextAreaElement>;
+  register?: any;
+  error?: string;
 } & React.InputHTMLAttributes<HTMLTextAreaElement>;
 
-export default function TextArea({ label, className, ...props }: Props) {
+export default function TextArea({
+  label,
+  className,
+  register,
+  error,
+  ...props
+}: Props) {
   const randomId = useId();
 
   return (
@@ -16,12 +24,8 @@ export default function TextArea({ label, className, ...props }: Props) {
       <label htmlFor={props.id || randomId} className={styles.label}>
         {label}
       </label>
-      <textarea
-        name={label}
-        className={styles.input}
-        id={props.id || randomId}
-        {...props}
-      />
+      <textarea {...register} className={styles.input} />
+      {error ? <p className={styles.error}>{error}</p> : null}
     </div>
   );
 }

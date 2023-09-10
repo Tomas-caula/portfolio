@@ -4,15 +4,22 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  gap: 0.5rem;
 }
 
 .texto {
   color: var(--font-color);
 }
 
+.error {
+  color: var(--error-color);
+  margin-top: 10px;
+}
+
 .input {
   background-color: var(--input-background);
   border: none;
+  color: var(--font-color);
   font-size: 1.1rem;
   padding: 10px;
 }

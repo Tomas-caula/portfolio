@@ -5,41 +5,97 @@ import TextInput from "../../components/TextInput/TextInput";
 import TextArea from "../../components/TextArea/TextArea";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+interface IFormInput {
+  name: string;
+  email: string;
+  message: string;
+  asunto: string;
+}
 
 export default function Form() {
-  const form = useRef<HTMLFormElement>(null);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!form.current) return;
-
+  const sendEmail = (data: IFormInput) => {
+    const templateParams = {
+      Nombre: data.name,
+      Asunto: data.asunto,
+      Email: data.email,
+      Mensaje: data.message,
+    };
     emailjs
-      .sendForm(
+      .send(
         "service_r5e52oi",
         "template_yami4or",
-        form.current,
+        templateParams,
         "Xz6VmElR43MwQ4HJs"
       )
       .then((result) => {
         console.log(result.text);
+        reset();
       })
       .catch((error: string) => {
         console.log(error);
       });
   };
 
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log("data", data);
+    sendEmail(data);
+  };
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Contactame</h1>
 
-      <form ref={form} onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.content}>
-          <TextInput label="Nombre"></TextInput>
-          <TextInput label="Email"></TextInput>
+          <TextInput
+            error={errors.name?.message}
+            register={{
+              ...register("name", { required: "Este campo es obligatorio" }),
+            }}
+            label="Nombre"
+          ></TextInput>
+          <TextInput
+            error={errors.email?.message}
+            register={{
+              ...register("email", {
+                required: "Este campo es obligatorio",
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "Ingresa un mail valido",
+                },
+              }),
+            }}
+            label="Email"
+          ></TextInput>
           <div style={{ gridColumn: "1/3" }}>
-            <TextInput label="Asunto"></TextInput>
+            <TextInput
+              register={{ ...register("asunto") }}
+              label="Asunto"
+            ></TextInput>
           </div>
-          <TextArea label="Mensaje" className={styles.fullWidth} />
+          <TextArea
+            error={errors.message?.message}
+            register={{
+              ...register("message", {
+                required: "Este campo es obligatorio",
+                minLength: {
+                  value: 10,
+                  message: "Este campo debe tener minimo 10 caracteres",
+                },
+              }),
+            }}
+            label="Mensaje"
+            className={styles.fullWidth}
+          />
           <button className={styles.button}>
             Enviar Mensaje{" "}
             <span style={{ height: "1em" }}>

@@ -24,6 +24,7 @@ html[theme="light"] {
   --input-background: #fafafa;
   --color-button: #222222;
   --hover-send-msg: rgb(61, 60, 60);
+  --error-color: #f46f23;
 }
 
 html[theme="dark"] {
@@ -36,6 +37,7 @@ html[theme="dark"] {
   --input-background: #272727;
   --color-button: #ffff;
   --hover-send-msg: #cecece;
+  --error-color: #f46f23;
 }
 
 .vertical-timeline-element-icon {
