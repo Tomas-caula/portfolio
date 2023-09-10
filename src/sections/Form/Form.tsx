@@ -4,7 +4,6 @@ import styles from "./Form.module.css";
 import TextInput from "../../components/TextInput/TextInput";
 import TextArea from "../../components/TextArea/TextArea";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface IFormInput {

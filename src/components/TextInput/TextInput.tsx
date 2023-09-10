@@ -7,7 +7,7 @@ type Props = {
   register?: any;
   error?: string;
 } & React.InputHTMLAttributes<HTMLInputElement>;
-export default function TextInput({ label, register, error, ...props }: Props) {
+export default function TextInput({ label, register, error }: Props) {
   return (
     <div className={styles.container}>
       <label className={styles.texto} htmlFor="">
