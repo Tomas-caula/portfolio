@@ -20,7 +20,7 @@ export default function Header({ name, title, date }: Props) {
     }
   }
 
-  const [count, setCount] = useState("light");
+  const [count, setCount] = useState("dark");
 
   return (
     <div className={styles.container}>

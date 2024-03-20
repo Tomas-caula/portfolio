@@ -32,10 +32,6 @@ const FrontEnd = [
 
 const BackEnd = [
   {
-    color: "#5856D680",
-    text: "C#",
-  },
-  {
     color: "#30D15880",
     text: "Node.js",
   },
