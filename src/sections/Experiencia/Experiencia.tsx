@@ -36,7 +36,7 @@ export default function Experiencia() {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          date="07/2023 - Actual"
+          date="2023 - Actual"
           className="vertical-timeline-element--work"
           iconStyle={{ background: "#FFF", color: "#fff" }}
           icon={
@@ -58,7 +58,7 @@ export default function Experiencia() {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          date="07/2023 - Actual"
+          date="2023 - Actual"
           className="vertical-timeline-element--work"
           iconStyle={{
             background: "#FFF",
