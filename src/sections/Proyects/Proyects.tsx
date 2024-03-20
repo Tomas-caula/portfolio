@@ -7,7 +7,6 @@ import { useState } from "react";
 import Button from "../../components/Botton/Button";
 import PalcareLogo from "../../assets/images/palcarelog.jpeg";
 
-import GitHubSvg from "../../assets/svg/GitHubVector.svg";
 import OpenSvg from "../../assets/svg/OpenSvg.svg";
 import Instagram from "../../assets/svg/Instagram.svg";
 
