@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ExperienceComponent from "../components/ExperienceComponent.astro";
+---
+
+<div class="experience">
+    <div class="experience-content">
+        <div class="experience-item">
+            <ExperienceComponent
+                fechas="sep 2023 - present"
+                role="Front-End | Mobile developer  · Palcare"
+                description="I worked as a mobile app developer at a startup company. I was responsible for developing and maintaining the company's React Native mobile application, focusing on creating responsive and user-friendly interfaces."
+                skills={[
+                    "React Native",
+                    "TypeScript",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "Redux",
+                    "React Navigation",
+                    "Git",
+                    "GitHub",
+                ]}
+            />
+        </div>
+    </div>
+</div>
+
+<style>
+    .experience {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #171c27;
+        color: white;
+    }
+    .experience-content {
+        width: 100%;
+        height: 100%;
+        padding: 0vw 15vw;
+    }
+    .experience-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .experience-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    function handleIntersection(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    document.addEventListener('astro:page-load', () => {
+        const experienceItems = document.querySelectorAll('.experience-item');
+        experienceItems.forEach(item => observer.observe(item));
+    });
+</script>

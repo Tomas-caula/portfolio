@@ -1,0 +1,86 @@
+---
+
+---
+
+<div class="me">
+    <div class="me-image"></div>
+    <div class="me-text">
+        <div class="hand">
+            <h2>👋 Hi, I’m</h2>
+        </div>
+        <h1>Tomas Caula</h1>
+        <p>
+            How's it going?  I'm Tomas, a passionate software developer with 3 years of experience. WHY?  Because my goal is to create new solutions, help people and improve the user experience on the Internet
+        </p>
+    </div>
+</div>
+
+
+<style>  
+    .me {
+        color: white;
+        background-image: url(../assets/GridDetails.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .me h1, .me h2, .me p {
+        color: white;
+    }
+
+    .me {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .me-image {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .me-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .me {
+            grid-template-columns: 1fr;
+        }
+
+        .me-image {
+            height: 300px;
+        }
+    }
+</style>

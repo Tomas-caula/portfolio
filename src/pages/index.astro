@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Me from "../sections/Me.astro";
+import Navbar from "../components/Navbar.astro";
+import Experience from "../sections/Experience.astro";
+---
+
+<Layout title="Tomas Caula">
+	<div class="section">
+		<Navbar />
+		<div class="big-light"></div>
+		<Me />
+	</div>
+	<Experience />
+</Layout>
+
+<style>
+	.big-light {
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		transform: translate(-50%, -50%);
+		width: 800px;
+		height: 800px;
+		border-radius: 50%;
+		background-color: var(--button-color);
+		opacity: 0.3;
+		filter: blur(200px);
+		box-shadow: 0 0 200px 100px var(--button-color);
+		z-index: -1;
+		animation: pulse 10s infinite alternate;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: translate(-50%, -50%) scale(1);
+		}
+		100% {
+			transform: translate(-50%, -50%) scale(1.2);
+		}
+	}
+	.section {
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+        border-bottom: 1px solid var(--button-color);
+	}
+</style>
