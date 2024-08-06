@@ -74,6 +74,40 @@ const { fechas, role, description, skills } = Astro.props;
         border: 1px solid var(--button-color);
         color: var(--button-color);
         background-color: rgba(120, 162, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .skills-item::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -100%;
+        width: 50%;
+        height: 200%;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(25deg);
+        transition: left 2s ease-in;
+    }
+
+    .skills-item:hover::before {
+        left: 150%;
+        transition: left 2s ease-in;
+        animation: reflectOnce 1s forwards;
+    }
+
+    @keyframes reflectOnce {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 150%;
+        }
     }
 
     @media (min-width: 768px) {

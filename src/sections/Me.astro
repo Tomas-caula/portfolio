@@ -1,22 +1,82 @@
 ---
-
+import me from "../assets/me.jpeg";
 ---
 
 <div class="me">
-    <div class="me-image"></div>
+    <div class="me-card">
+        <img src={me.src} alt="Tomas Caula" />
+        <h1 class="name">Tomas Caula</h1>
+        <div class="social">
+            <a href="https://github.com/tomas-caula"
+                ><svg
+                    width="50"
+                    height="auto"
+                    viewBox="0 0 92 92"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M45.6097 21.0479C31.3913 21.0479 19.875 32.5183 19.875 46.6802C19.875 58.0225 27.2416 67.6026 37.4711 70.9989C38.7578 71.2232 39.2404 70.4542 39.2404 69.7813C39.2404 69.1726 39.2082 67.154 39.2082 65.0073C32.7424 66.1928 31.0696 63.4373 30.5549 61.9955C30.2654 61.2586 29.0108 58.9837 27.9171 58.375C27.0164 57.8943 25.7296 56.7089 27.8849 56.6768C29.9115 56.6448 31.3591 58.5352 31.8416 59.3041C34.1578 63.181 37.8571 62.0916 39.3369 61.4188C39.562 59.7527 40.2376 58.6313 40.9775 57.9905C35.2515 57.3497 29.2682 55.1389 29.2682 45.3345C29.2682 42.547 30.2654 40.2401 31.906 38.4458C31.6486 37.805 30.7479 35.1777 32.1633 31.6532C32.1633 31.6532 34.3186 30.9804 39.2404 34.2806C41.2991 33.7038 43.4866 33.4155 45.674 33.4155C47.8615 33.4155 50.0489 33.7038 52.1077 34.2806C57.0295 30.9483 59.1848 31.6532 59.1848 31.6532C60.6002 35.1777 59.6994 37.805 59.4421 38.4458C61.0827 40.2401 62.0799 42.5149 62.0799 45.3345C62.0799 55.1709 56.0644 57.3497 50.3385 57.9905C51.2713 58.7915 52.0755 60.3294 52.0755 62.7325C52.0755 66.1608 52.0434 68.9163 52.0434 69.7813C52.0434 70.4542 52.5259 71.2552 53.8126 70.9989C63.9778 67.6026 71.3444 57.9905 71.3444 46.6802C71.3444 32.5183 59.8281 21.0479 45.6097 21.0479Z"
+                        fill="white"></path>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/tomas-caula">
+                <svg
+                    width="50"
+                    height="auto"
+                    viewBox="0 0 92 92"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M35.2487 64.3345V39.601H27.0349V64.3345H35.2495H35.2487ZM31.1435 36.2247C34.0072 36.2247 35.79 34.3254 35.79 31.9519C35.7364 29.5243 34.0072 27.6781 31.198 27.6781C28.3868 27.6781 26.5508 29.5243 26.5508 31.9517C26.5508 34.3252 28.333 36.2245 31.0897 36.2245H31.1429L31.1435 36.2247ZM39.7951 64.3345H48.0082V50.5237C48.0082 49.7855 48.0618 49.0453 48.2787 48.518C48.8722 47.0405 50.2237 45.511 52.4932 45.511C55.4646 45.511 56.6539 47.7789 56.6539 51.1042V64.3345H64.8668V50.1531C64.8668 42.5563 60.8152 39.0212 55.4114 39.0212C50.981 39.0212 49.0352 41.4996 47.9541 43.1877H48.0088V39.6019H39.7955C39.9027 41.9222 39.7949 64.3354 39.7949 64.3354L39.7951 64.3345Z"
+                        fill="white"></path>
+                </svg>
+            </a>
+            <a href="https://twitter.com/tomas_caula" target="_blank">
+                <svg
+                    width="50"
+                    height="auto"
+                    viewBox="0 0 92 92"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M68.5055 31.2845C66.9937 31.9358 65.4043 32.3892 63.7766 32.6337C64.5376 32.5032 65.6573 31.1322 66.103 30.5773C66.7801 29.7403 67.2962 28.7847 67.6249 27.7592C67.6249 27.6831 67.701 27.5743 67.6249 27.5199C67.5866 27.4989 67.5436 27.4879 67.4999 27.4879C67.4562 27.4879 67.4133 27.4989 67.3749 27.5199C65.6075 28.4778 63.7265 29.2089 61.7764 29.696C61.7084 29.7168 61.6361 29.7186 61.5671 29.7014C61.4982 29.6841 61.4352 29.6484 61.385 29.5981C61.2332 29.4171 61.0698 29.2463 60.8958 29.0867C60.1004 28.3734 59.198 27.7896 58.2216 27.3566C56.9035 26.8154 55.4798 26.581 54.058 26.6712C52.6784 26.7584 51.3315 27.1287 50.101 27.7592C48.8893 28.424 47.8243 29.327 46.9701 30.4141C46.0716 31.533 45.423 32.8315 45.0677 34.2223C44.7748 35.5452 44.7416 36.9125 44.9699 38.2481C44.9699 38.4766 44.9699 38.5093 44.7742 38.4766C37.0232 37.3342 30.6637 34.5814 25.4674 28.6732C25.2391 28.4121 25.1195 28.4121 24.9347 28.6732C22.6736 32.1115 23.7715 37.5518 26.598 40.2393C26.9785 40.5983 27.3698 40.9465 27.7829 41.2729C26.487 41.1809 25.2228 40.8294 24.0651 40.2393C23.8476 40.0978 23.7281 40.174 23.7172 40.4351C23.6864 40.7972 23.6864 41.1612 23.7172 41.5232C23.944 43.2582 24.6272 44.9018 25.6968 46.2859C26.7664 47.67 28.1841 48.7449 29.8049 49.4008C30.2 49.5702 30.6117 49.6978 31.0333 49.7816C29.8336 50.018 28.6032 50.0547 27.3916 49.8904C27.1307 49.836 27.0328 49.9774 27.1307 50.2277C28.7287 54.5799 32.1965 55.9074 34.7403 56.6472C35.0882 56.7017 35.4361 56.7017 35.8274 56.7887C35.8274 56.7887 35.8274 56.7887 35.7622 56.854C35.0121 58.2249 31.9791 59.1498 30.5876 59.6285C28.0478 60.5416 25.3399 60.8906 22.6518 60.6513C22.2279 60.586 22.13 60.5969 22.0213 60.6513C21.9126 60.7057 22.0213 60.8254 22.1409 60.9342C22.6845 61.2933 23.228 61.6088 23.7933 61.9135C25.4762 62.8322 27.2553 63.562 29.0983 64.0896C38.643 66.7227 49.3835 64.7859 56.5475 57.6591C62.1786 52.0665 64.1571 44.3522 64.1571 36.6269C64.1571 36.3331 64.5159 36.1591 64.7224 36.0067C66.1471 34.8957 67.403 33.5836 68.4511 32.1115C68.6326 31.892 68.7257 31.6126 68.712 31.3281C68.712 31.1649 68.712 31.1975 68.5055 31.2845Z"
+                        fill="white"></path>
+                </svg>
+            </a>
+        </div>
+        <a href="/path/to/your/cv.pdf" download class="download-cv">
+            Download CV
+        </a>
+    </div>
     <div class="me-text">
         <div class="hand">
-            <h2>👋 Hi, I’m</h2>
+            <h1>👋 Hi, I'm</h1>
+            <h1>Full Stack Developer</h1>
         </div>
-        <h1>Tomas Caula</h1>
         <p>
-            How's it going?  I'm Tomas, a passionate software developer with 3 years of experience. WHY?  Because my goal is to create new solutions, help people and improve the user experience on the Internet
+            How's it going? I'm Tomas, a passionate software developer with 3
+            years of experience. WHY? Because my goal is to create new
+            solutions, help people and improve the user experience on the
+            Internet
         </p>
     </div>
 </div>
 
-
-<style>  
+<style>
+    .name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.1em;
+        color: white;
+    }
     .me {
         color: white;
         background-image: url(../assets/GridDetails.png);
@@ -25,14 +85,16 @@
         background-size: cover;
     }
 
-    .me h1, .me h2, .me p {
+    .me .me-text h1,
+    .me .me-text h2,
+    .me .me-text p {
         color: white;
     }
 
     .me {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.6vw;
         align-items: center;
         justify-content: center;
         max-width: 1200px;
@@ -40,10 +102,23 @@
         padding: 2rem;
     }
 
-    .me-image {
+    .me-card {
+        width: 10px;
+        padding: 1.2rem;
+        background-color: #171b27;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .me-card img {
         width: 100%;
-        height: 400px;
-        background-color: rgba(255, 255, 255, 0.1);
+        aspect-ratio: 3/2;
+        object-fit: cover;
         border-radius: 10px;
     }
 
@@ -51,36 +126,120 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
     }
 
     .hand {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        flex-direction: column;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 0;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin: 0;
     }
 
     p {
-        font-size: 1.1rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         .me {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
         }
 
-        .me-image {
-            height: 300px;
+        .me-card {
+            width: 22vw;
         }
+
+        .me-text {
+            text-align: left;
+        }
+
+        .hand {
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+
+    .download-cv {
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        color: var(--button-color);
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid var(--button-color);
+    }
+
+    .download-cv::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-color: var(--button-color);
+        border-style: solid;
+        border-width: 0px;
+        z-index: -2;
+    }
+
+    .download-cv::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: color-mix(in srgb, var(--button-color) 85%, black);
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    .download-cv:hover {
+        color: #171c27;
+    }
+
+    .download-cv:hover::before {
+        width: 100%;
+    }
+
+    .social svg path {
+        fill: white; /* Change this to your desired color */
+        width: 5px; /* Adjust size as needed */
+        height: 5px;
+    }
+    .social a {
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social a:hover {
+        animation: wiggle 0.5s ease-in-out;
     }
 </style>
