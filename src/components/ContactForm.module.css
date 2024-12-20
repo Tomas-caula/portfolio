@@ -7,7 +7,14 @@
   padding: 2rem;
   background-color: #171c27;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 119, 190, 0.2), 0 4px 8px rgba(0, 119, 190, 0.1);
+}
+
+.contactContainer{
+  width: 70%;
+}
+
+.formTitle{
+  color: #0077BE;
 }
 
 .input,

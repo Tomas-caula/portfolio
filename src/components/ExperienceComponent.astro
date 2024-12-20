@@ -4,9 +4,10 @@ interface Props {
     role: string;
     description: string;
     skills: string[];
+    url?: string; // Made the URL property optional
 }
 
-const { fechas, role, description, skills } = Astro.props;
+const { fechas, role, description, skills, url } = Astro.props;
 ---
 
 <div class="experience">
@@ -26,6 +27,26 @@ const { fechas, role, description, skills } = Astro.props;
             </ul>
         </div>
     </div>
+    {url && (
+        <a href={url} target="_blank" class="open-url" aria-label="Open URL">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-external-link"
+            >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+        </a>
+    )}
 </div>
 
 <style>
@@ -99,6 +120,22 @@ const { fechas, role, description, skills } = Astro.props;
         left: 150%;
         transition: left 2s ease-in;
         animation: reflectOnce 1s forwards;
+    }
+
+    .open-url {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: var(--button-color);
+        text-decoration: none;
+        border: none;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .open-url:hover svg {
+        stroke: #ff6347; /* Change the color on hover */
     }
 
     @keyframes reflectOnce {
