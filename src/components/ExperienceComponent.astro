@@ -1,191 +1,189 @@
 ---
 interface Props {
-    fechas: string;
-    role: string;
-    description: string;
-    skills: string[];
-    url?: string; // Made the URL property optional
+  fechas: string;
+  role: string;
+  description: string;
+  skills: string[];
+  url?: string; // Made the URL property optional
 }
 
 const { fechas, role, description, skills, url } = Astro.props;
 ---
 
 <div class="experience">
-    <p class="fechas">{fechas}</p>
-    <div class="experience-content">
-        <div class="experience-info">
-            <h3 class="role">{role}</h3>
-            <p class="description">{description}</p>
-        </div>
-        <div class="skills">
-            <ul class="skills-list">
-                {
-                    skills.map((skill) => (
-                        <li class="skills-item">{skill}</li>
-                    ))
-                }
-            </ul>
-        </div>
+  <p class="fechas">{fechas}</p>
+  <div class="experience-content">
+    <div class="experience-info">
+      <h3 class="role">{role}</h3>
+      <p class="description">{description}</p>
     </div>
-    {url && (
-        <a href={url} target="_blank" class="open-url" aria-label="Open URL">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-external-link"
-            >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-        </a>
-    )}
+    <div class="skills">
+      <ul class="skills-list">
+        {skills.map((skill) => <li class="skills-item">{skill}</li>)}
+      </ul>
+    </div>
+  </div>
+  {
+    url && (
+      <a href={url} target="_blank" class="open-url" aria-label="Open URL">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-external-link"
+        >
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+          <polyline points="15 3 21 3 21 9" />
+          <line x1="10" y1="14" x2="21" y2="3" />
+        </svg>
+      </a>
+    )
+  }
 </div>
 
 <style>
+  .experience {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .fechas {
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .experience-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .role {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--button-color);
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .skills-item {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+    background-color: rgba(120, 162, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skills-item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    transition: left 2s ease-in;
+  }
+
+  .skills-item:hover::before {
+    left: 150%;
+    transition: left 2s ease-in;
+    animation: reflectOnce 1s forwards;
+  }
+
+  .open-url {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--button-color);
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .open-url:hover svg {
+    stroke: #ff6347; /* Change the color on hover */
+  }
+
+  @keyframes reflectOnce {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+
+  @media (min-width: 768px) {
     .experience {
-        display: flex;
-        flex-direction: column;
-        padding: 1.5rem;
-        border-radius: 8px;
-        gap: 1rem;
+      flex-direction: row;
     }
 
     .fechas {
-        font-size: 0.9rem;
-        color: #888;
+      flex-basis: 20%;
     }
 
     .experience-content {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+      flex: 1;
     }
 
     .role {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: var(--button-color);
+      font-size: 1.8rem;
     }
 
     .description {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0;
-        list-style-type: none;
+      font-size: 1.1rem;
     }
 
     .skills-item {
-        padding: 0.3rem 0.8rem;
-        border-radius: 12px;
-        font-size: 0.9rem;
-        border: 1px solid var(--button-color);
-        color: var(--button-color);
-        background-color: rgba(120, 162, 0, 0.2);
-        position: relative;
-        overflow: hidden;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .experience {
     }
 
-    .skills-item::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -100%;
-        width: 50%;
-        height: 200%;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.3) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        transform: rotate(25deg);
-        transition: left 2s ease-in;
+    .role {
+      font-size: 2rem;
     }
 
-    .skills-item:hover::before {
-        left: 150%;
-        transition: left 2s ease-in;
-        animation: reflectOnce 1s forwards;
+    .description {
+      font-size: 1.2rem;
     }
+  }
 
-    .open-url {
-        margin-top: 1rem;
-        font-size: 1rem;
-        color: var(--button-color);
-        text-decoration: none;
-        border: none;
-        padding: 0;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .open-url:hover svg {
-        stroke: #ff6347; /* Change the color on hover */
-    }
-
-    @keyframes reflectOnce {
-        0% {
-            left: -100%;
-        }
-        100% {
-            left: 150%;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .experience {
-            flex-direction: row;
-            gap: 2rem;
-        }
-
-        .fechas {
-            flex-basis: 20%;
-            text-align: right;
-        }
-
-        .experience-content {
-            flex: 1;
-        }
-
-        .role {
-            font-size: 1.8rem;
-        }
-
-        .description {
-            font-size: 1.1rem;
-        }
-
-        .skills-item {
-            font-size: 1rem;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .experience {
-            gap: 5vw;
-        }
-
-        .role {
-            font-size: 2rem;
-        }
-
-        .description {
-            font-size: 1.2rem;
-        }
-    }
+  .experience:hover {
+    background-color: #0000005b;
+  }
 </style>
