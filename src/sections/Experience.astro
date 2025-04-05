@@ -26,40 +26,21 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
                 "GitHub",
             ]}
         />
+
         <ExperienceComponent
-            fechas="sep 2023 - present"
-            role="Front-end developer · Palcare"
-            description="Build, develop a static web site for a healthcare company. Working closely with the client & UX-UI designer  "
-            skills={[
-                "React",
-                "HTML",
-                "CSS",
-            ]}
-            url="https://palcarehealth.com"
+            fechas="2023"
+            role="Developer & designer · Caula&Dodero"
+            description="As the front-end developer, I developed and tested a website for architects. I also contributed to the design, focusing on their unique needs and aesthetics, while collaborating closely with the client and UX-UI designer."
+            skills={["React", "HTML", "CSS"]}
+            url="https://estomba-feel.vercel.app"
         />
         <ExperienceComponent
-        fechas="2023"
-        role="Developer & designer · Caula&Dodero"
-        description="As the front-end developer, I developed and tested a website for architects. I also contributed to the design, focusing on their unique needs and aesthetics, while collaborating closely with the client and UX-UI designer."
-        skills={[
-            "React",
-            "HTML",
-            "CSS",
-        ]}
-        url="https://estomba-feel.vercel.app"
-    />
-    <ExperienceComponent
-        fechas="2024"
-        role="Front-End Developer · MiContainer"
-        description="Build, develop a static web site for a healthcare company. Working closely with the client & UX-UI designer  "
-        skills={[
-            "React",
-            "TypeScript",
-            "CSS3",
-            "Redux"
-        ]}
-        url="https://mi-container-own-repo.vercel.app"
-    />
+            fechas="2024"
+            role="Front-End Developer · MiContainer"
+            description="I developed the front end of Mi Container — a web application designed for logistics and container management. My focus was on translating UI designs into a responsive and user-friendly interface, ensuring smooth interactions and a clean layout using modern web technologies. "
+            skills={["React", "TypeScript", "CSS3", "Redux"]}
+            url="https://mi-container-own-repo.vercel.app"
+        />
     </div>
 </div>
 <style>
@@ -73,7 +54,7 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
         color: white;
         position: relative;
         overflow: hidden;
-        border-bottom: 2px solid #0077BE;
+        border-bottom: 2px solid #0077be;
     }
     .experience-content {
         width: 100%;
@@ -95,7 +76,7 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
     .experience-subline {
         width: 50px;
         height: 3px;
-        background-color: #78A200;
+        background-color: #78a200;
     }
     .big-light {
         position: absolute;
@@ -104,10 +85,12 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
         transform: translate(0%, 0%);
         width: 600px;
         border-radius: 50%;
-        background: linear-gradient(45deg, #005999, #0077BE);
+        background: linear-gradient(45deg, #005999, #0077be);
         opacity: 0.3;
         filter: blur(200px);
-        box-shadow: 0 0 200px 100px #005999, 0 0 200px 100px #0077BE;
+        box-shadow:
+            0 0 200px 100px #005999,
+            0 0 200px 100px #0077be;
         z-index: 0;
         animation: pulse 10s infinite alternate;
     }

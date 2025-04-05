@@ -7,7 +7,6 @@ import vector from "../assets/VectorVerify.svg";
     <div class="profile">
         <img src={me.src} alt="Tomas Caula" />
         <h1>Tomas Caula</h1>
-        <img id="verify" src={vector.src} alt="verify" />
     </div>
     <div>
         <a href="#experience">Experience</a>
@@ -57,10 +56,10 @@ import vector from "../assets/VectorVerify.svg";
 
     .navbar a {
         display: inline-block;
-        padding: .75rem 1.25rem;
+        padding: 0.75rem 1.25rem;
         color: var(--button-color);
         font-size: 1rem;
-        letter-spacing: .15rem;
+        letter-spacing: 0.15rem;
         text-decoration: none;
         transition: all 0.3s;
         position: relative;
@@ -70,7 +69,7 @@ import vector from "../assets/VectorVerify.svg";
     }
 
     .navbar a::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -78,24 +77,24 @@ import vector from "../assets/VectorVerify.svg";
         height: 100%;
         border-color: var(--button-color);
         border-style: solid;
-        border-width: 0px;  
+        border-width: 0px;
         z-index: -2;
     }
 
     .navbar a::before {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 0%;
         height: 100%;
         background-color: color-mix(in srgb, var(--button-color) 85%, black);
-        transition: all .3s;
+        transition: all 0.3s;
         z-index: -1;
     }
 
     .navbar a:hover {
-        color: #171C27;
+        color: #171c27;
     }
 
     .navbar a:hover::before {

@@ -42,27 +42,28 @@ const Contact = () => {
   return (
     <div className={styles.contactContainer}>
       <ToastContainer position="top-right" />
-      <form onSubmit={handleSubmit} className={`${styles.form} ${styles.largeForm}`}>
+      <form onSubmit={handleSubmit} className={`${styles.form}`}>
         <h2 className={styles.formTitle}>Contact Us</h2>
         <input
           type='text'
           placeholder='Your Name'
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className={`${styles.input} ${styles.largeInput}`}
+          className={`${styles.input}`}
         />
         <input
           type='email'
           placeholder='Your Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className={`${styles.input} ${styles.largeInput}`}
+          className={`${styles.input}`}
         />
         <textarea
           placeholder='Your Message'
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className={`${styles.textarea} ${styles.largeTextarea}`}
+          className={`${styles.textarea}`}
+          resize="none"
         />
         <input type='submit' value='Send Email' className={`${styles.button} ${styles.largeButton}`} />
       </form>
