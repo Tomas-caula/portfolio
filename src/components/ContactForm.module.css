@@ -20,17 +20,38 @@
   color: #0077BE;
 }
 
+.inputGroup {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .input,
 .textarea {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   padding: 0.8rem;
   border: 1px solid #0077BE;
   border-radius: 6px;
   font-size: 1rem;
   background-color: #1f2937;
   color: #ffffff;
-  padding: 0px;
+  transition: border-color 0.3s ease;
+}
 
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #005c91;
+  box-shadow: 0 0 0 2px rgba(0, 119, 190, 0.2);
+}
+
+.inputError {
+  border-color: #ff4444;
+}
+
+.inputError:focus {
+  border-color: #ff4444;
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.2);
 }
 
 .textarea {
@@ -65,6 +86,12 @@
   cursor: not-allowed;
 }
 
+.buttonDisabled {
+  background-color: #003a5c !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+
 .successMessage,
 .errorMessage {
   text-align: center;
@@ -77,7 +104,10 @@
 }
 
 .errorMessage {
-  color: #0077BE;
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
