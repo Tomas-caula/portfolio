@@ -9,8 +9,8 @@ import vector from "../assets/VectorVerify.svg";
         <h1>Tomas Caula</h1>
     </div>
     <div>
-        <a href="#experience">Experience</a>
-        <a href="/#contact-form">Contact</a>
+        <a id="experience-btn" type="button">Experiencia</a>
+        <a id="contact-btn" type="button">Contacto</a>
         <!-- // <a href="#projects">Hire Me</a> -->
     </div>
 </div>
@@ -66,6 +66,26 @@ import vector from "../assets/VectorVerify.svg";
         overflow: hidden;
         z-index: 1;
         border: 1px solid var(--button-color);
+        cursor: pointer;
+        /* Animación inicial */
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInDown 0.7s forwards;
+    }
+
+    /* Animación para los enlaces */
+    .navbar a#experience-btn {
+        animation-delay: 0.1s;
+    }
+    .navbar a#contact-btn {
+        animation-delay: 0.3s;
+    }
+
+    @keyframes fadeInDown {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .navbar a::after {
@@ -126,3 +146,31 @@ import vector from "../assets/VectorVerify.svg";
         height: 25px;
     }
 </style>
+
+<script>
+    // Modularización de la función de scroll animado
+    function scrollToSection(sectionId: string) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            // Opcional: cambiar la URL sin el hash
+            history.replaceState(null, "", window.location.pathname);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const btnContacto = document.getElementById("contact-btn");
+        if (btnContacto) {
+            btnContacto.addEventListener("click", function () {
+                scrollToSection("contact");
+            });
+        }
+
+        const btnExperiencia = document.getElementById("experience-btn");
+        if (btnExperiencia) {
+            btnExperiencia.addEventListener("click", function () {
+                scrollToSection("experience");
+            });
+        }
+    });
+</script>
