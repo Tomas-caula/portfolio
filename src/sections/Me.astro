@@ -116,7 +116,13 @@ import zeros from "../assets/zeros.png";
 
         <!-- Redes sociales -->
         <div class="flex gap-6 mt-6 flex-wrap">
-          <a href="#" class="hover:text-white" style="color: #FFF;">
+          <a
+            href="https://github.com/tomascaula"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white"
+            style="color: #FFF;"
+          >
             <div
               class="w-28 h-16 flex items-center justify-center bg-black/70 backdrop-blur-md rounded-xl border border-white/20 shadow-lg transition-all duration-200 social-div"
             >
@@ -128,7 +134,13 @@ import zeros from "../assets/zeros.png";
               />
             </div>
           </a>
-          <a href="#" class="hover:text-white" style="color: #FFF;">
+          <a
+            href="https://www.linkedin.com/in/tomascaula/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white"
+            style="color: #FFF;"
+          >
             <div
               class="w-28 h-16 flex items-center justify-center bg-black/70 backdrop-blur-md rounded-xl border border-white/20 shadow-lg transition-all duration-200 social-div"
             >
@@ -140,7 +152,13 @@ import zeros from "../assets/zeros.png";
               />
             </div>
           </a>
-          <a href="#" class="hover:text-white" style="color: #FFF;">
+          <a
+            href="https://twitter.com/tomascaula"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white"
+            style="color: #FFF;"
+          >
             <div
               class="w-28 h-16 flex items-center justify-center bg-black/70 backdrop-blur-md rounded-xl border border-white/20 shadow-lg transition-all duration-200 social-div"
             >
@@ -215,17 +233,18 @@ import zeros from "../assets/zeros.png";
           </a>
         </section>
         <section
-          class="p-6 rounded-2xl flex items-center justify-between blog-exp-card"
+          class="p-6 rounded-2xl flex items-center justify-between blog-exp-card cursor-pointer"
           style="background-color: #07080B; color: #FFF; height: 112px; min-height: 0;"
+          id="go-to-experience"
         >
           <span class="text-3xl blog-exp-title" style="color: #FFF;"
             >Experiencia</span
           >
           <a
-            href="#"
-            class="text-white text-3xl"
+            class="text-white text-3xl pointer-events-none"
             aria-label="Ver experiencia"
             style="color: #FFF;"
+            tabindex="-1"
           >
             <!-- Flecha SVG de alta calidad, blanca, palito más largo, rotada 45° hacia arriba -->
             <svg
@@ -250,3 +269,25 @@ import zeros from "../assets/zeros.png";
     </div>
   </div>
 </div>
+
+<script>
+  // Corrige la importación, ya que Astro no permite importar scripts TypeScript como módulos
+  // y tampoco permite usar "src={script.src}" para scripts locales.
+  // Por lo tanto, insertamos el código JS directamente aquí.
+  function scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      history.replaceState(null, "", window.location.pathname);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const expCard = document.getElementById("go-to-experience");
+    if (expCard) {
+      expCard.addEventListener("click", function () {
+        scrollToSection("experience");
+      });
+    }
+  });
+</script>

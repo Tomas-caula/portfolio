@@ -99,7 +99,7 @@ const Contact = () => {
     <div className={styles.contactContainer}>
       <ToastContainer position="top-right" />
       <form onSubmit={handleSubmit} className={`${styles.form}`}>
-        <h2 className={styles.formTitle}>Contact Us</h2>
+        <h2 className={styles.formTitle}>Contáctame</h2>
 
         <div className={styles.inputGroup}>
           <input

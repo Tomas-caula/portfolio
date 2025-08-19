@@ -7,13 +7,13 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
     <div class="big-light"></div>
     <div class="experience-content">
         <div class="experience-header">
-            <h2 class="experience-title">Experience</h2>
+            <h2 class="experience-title">Experiencia</h2>
             <div class="experience-subline"></div>
         </div>
         <ExperienceComponent
-            fechas="sep 2023 - present"
-            role="Front-End | Mobile developer  · Palcare"
-            description="I worked as a mobile app developer at a startup company. I was responsible for developing and maintaining the company's React Native mobile application, focusing on creating responsive and user-friendly interfaces."
+            fechas="sep 2023 - presente"
+            role="Desarrollador Front-End | Mobile · Palcare"
+            description="Trabajé como desarrollador de aplicaciones móviles en una startup. Fui responsable de desarrollar y mantener la aplicación móvil de la empresa en React Native, enfocándome en crear interfaces responsivas y fáciles de usar."
             skills={[
                 "React Native",
                 "TypeScript",
@@ -25,19 +25,23 @@ import ExperienceComponent from "../components/ExperienceComponent.astro";
                 "Git",
                 "GitHub",
             ]}
+            url="https://palcarehealth.com/"
         />
-
-        <ExperienceComponent
+        {
+            /*
+                <ExperienceComponent
             fechas="2023"
-            role="Developer & designer · Caula&Dodero"
-            description="As the front-end developer, I developed and tested a website for architects. I also contributed to the design, focusing on their unique needs and aesthetics, while collaborating closely with the client and UX-UI designer."
+            role="Desarrollador & diseñador · Caula&Dodero"
+            description="Como desarrollador front-end, desarrollé y probé un sitio web para arquitectos. También contribuí al diseño, enfocándome en sus necesidades y estética únicas, colaborando estrechamente con el cliente y el diseñador UX-UI."
             skills={["React", "HTML", "CSS"]}
             url="https://estomba-feel.vercel.app"
-        />
+        />*/
+        }
+
         <ExperienceComponent
             fechas="2024"
-            role="Front-End Developer · MiContainer"
-            description="I developed the front end of Mi Container — a web application designed for logistics and container management. My focus was on translating UI designs into a responsive and user-friendly interface, ensuring smooth interactions and a clean layout using modern web technologies. "
+            role="Desarrollador Front-End · MiContainer"
+            description="Desarrollé el front end de Mi Container — una aplicación web diseñada para la gestión logística y de contenedores. Mi enfoque fue traducir los diseños UI en una interfaz responsiva y fácil de usar, asegurando interacciones fluidas y un diseño limpio utilizando tecnologías web modernas."
             skills={["React", "TypeScript", "CSS3", "Redux"]}
             url="https://mi-container-own-repo.vercel.app"
         />
