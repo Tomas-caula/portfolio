@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './ContactForm.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -59,37 +60,29 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          message: message.trim(),
-        }),
-      });
+      // EmailJS configuration
+      const serviceId = 'service_r5e52oi';
+      const templateId = 'template_yami4or';
+      const publicKey = 'Xz6VmElR43MwQ4HJs';
 
-      const data = await response.json();
+      // Prepare template parameters
+      const templateParams = {
+        from_name: name.trim(),
+        from_email: email.trim(),
+        message: message.trim(),
+        to_name: 'Tomas Caula',
+      };
 
-      if (response.ok) {
-        toast.success(data.message);
-        resetForm(); // Reiniciar el formulario después del envío exitoso
-        console.log(`Mensaje enviado desde IP: ${data.ip}`);
-      } else {
-        // Manejar diferentes tipos de errores
-        if (response.status === 403) {
-          toast.error('Tu IP ha sido baneada por múltiples intentos de spam.');
-        } else if (response.status === 429) {
-          toast.error('Demasiados intentos de envío. Tu IP ha sido baneada temporalmente.');
-        } else {
-          toast.error(data.message || 'Error al enviar el mensaje. Por favor intenta de nuevo.');
-        }
-      }
+      // Send email using EmailJS
+      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      console.log('Email sent successfully:', result);
+      toast.success('¡Mensaje enviado exitosamente!');
+      resetForm();
+      
     } catch (error) {
       console.error('Error al enviar mensaje:', error);
-      toast.error('Error de conexión. Por favor intenta de nuevo.');
+      toast.error('Error al enviar el mensaje. Por favor intenta de nuevo.');
     } finally {
       setIsLoading(false);
     }
