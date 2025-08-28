@@ -65,12 +65,14 @@ const Contact = () => {
       const templateId = 'template_yami4or';
       const publicKey = 'Xz6VmElR43MwQ4HJs';
 
-      // Prepare template parameters
+      // Prepare template parameters (matching your EmailJS template)
       const templateParams = {
-        from_name: name.trim(),
-        from_email: email.trim(),
-        message: message.trim(),
-        to_name: 'Tomas Caula',
+        Nombre: name.trim(),
+        Email: email.trim(),
+        Mensaje: message.trim(),
+        Asunto: 'Contacto desde el portfolio',
+        IP_Remitente: 'Cliente web',
+        Fecha: new Date().toISOString()
       };
 
       // Send email using EmailJS
