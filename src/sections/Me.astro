@@ -205,13 +205,13 @@ import zeros from "../assets/zeros.png";
 
       <!-- Sección Blog y Experiencia (ocupa 2/5 columnas en desktop, 100% en mobile) -->
       <div class="flex flex-col gap-4 w-full md:w-2/5 h-full blog-exp-col">
-        <section
+        <a
+          href="/blog"
           class="p-6 rounded-2xl flex items-center justify-between blog-exp-card"
-          style="background-color: #07080B; color: #FFF; height: 50%; min-height: 0;"
+          style="background-color: #07080B; color: #FFF; height: 50%; min-height: 0; text-decoration: none;"
         >
           <span class="text-3xl blog-exp-title" style="color: #FFF;">Blog</span>
-          <a
-            href="#"
+          <span
             class="text-white text-3xl"
             aria-label="Ir al blog"
             style="color: #FFF;"
@@ -233,8 +233,8 @@ import zeros from "../assets/zeros.png";
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-          </a>
-        </section>
+          </span>
+        </a>
         <section
           class="p-6 rounded-2xl flex items-center justify-between blog-exp-card cursor-pointer"
           style="background-color: #07080B; color: #FFF; height: 112px; min-height: 0;"
