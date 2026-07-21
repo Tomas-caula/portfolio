@@ -1,0 +1,90 @@
+---
+
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <p class="footer-text">© 2025 Tomas Caula. All rights reserved.</p>
+    </div>
+    <div class="footer-section">
+      <div class="social-links">
+        <a href="https://github.com/tomascaula" target="_blank" rel="noopener noreferrer" class="social-link">
+          <img src="/src/icons/GitHub.svg" alt="GitHub" class="social-icon" />
+        </a>
+        <a href="https://linkedin.com/in/tomascaula" target="_blank" rel="noopener noreferrer" class="social-link">
+          <img src="/src/icons/Linkedin.svg" alt="LinkedIn" class="social-icon" />
+        </a>
+        <a href="https://twitter.com/tomascaula" target="_blank" rel="noopener noreferrer" class="social-link">
+          <img src="/src/icons/Twitter.svg" alt="Twitter" class="social-icon" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #0f1419;
+    border-top: 1px solid var(--button-color);
+    padding: 2rem 1rem;
+    margin-top: auto;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-text {
+    color: #8b949e;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(189, 255, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .social-link:hover {
+    background-color: rgba(189, 255, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(212deg) brightness(100%) contrast(100%);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  }
+</style>
